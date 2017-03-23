@@ -15,13 +15,17 @@ int main()
     perror("Init gyro");
 
     int x,y,z;
+    float gx,gy,gz;
 
     while(1){
         x=gyro.getAccelX();
         y=gyro.getAccelY();
         z=gyro.getAccelZ();
+        gx=gyro.getGyroX();
+        gy=gyro.getGyroY();
+        gz=gyro.getGyroZ();
 
-        printf("x=%d    y=%d    z=%d      ax=%f\n", x, y, z, gyro.getAngleX());
+        printf("x=%d    y=%d    z=%d      ax=%f     gx=%f   gy=%f   gz=%f\n", x, y, z, gyro.getAngleX(),gx ,gy ,gz);
     }
 }
 
